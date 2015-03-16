@@ -40,6 +40,8 @@ let mapleader = "\<Space>"
 cnoreabbrev W w
 
 " vim-airline
+set timeoutlen=50
+set laststatus=2
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_section_z=''
