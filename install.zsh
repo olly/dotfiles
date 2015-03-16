@@ -3,6 +3,10 @@
 BASE=$(dirname $0)
 
 for file ($BASE/.*); do
-  cd $HOME
-  ln -sf $file
+  basename=$(basename $file)
+  if [ $basename != ".git" ]; then
+    cd $HOME
+    ln -sf $file
+    cd -
+  fi
 done
